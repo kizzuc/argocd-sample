@@ -1,0 +1,11 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: engineering-dev-guestbook
+spec:
+  source:
+    repoURL: https://github.com/kizzuc/argocd-sample.git
+    targetRevision: HEAD
+    path: dev
+  destination:
+    namespace: guestbook
